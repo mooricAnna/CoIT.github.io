@@ -1,1 +1,1 @@
-# CoIT.github.io
+# coit.github.io
