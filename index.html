@@ -275,20 +275,17 @@
                 <h2 class="title is-3">Abstract</h2>
                 <div class="content has-text-justified">
                     <p style="font-size: 125%">
-                        Prompt-based learning has emerged as a successful paradigm in natural language processing, where
-                        a single general-purpose language model can be instructed to perform any task specified by input
-                        prompts. Yet task specification in robotics comes in various forms, such as imitating one-shot
-                        demonstrations, following language instructions, and reaching visual goals. They are often
-                        considered different tasks and tackled by specialized models. This work shows that we can
-                        express a wide spectrum of robot manipulation tasks with <i>multimodal prompts</i>, interleaving
-                        textual and visual tokens. We design a transformer-based generalist robot agent, VIMA, that
-                        processes these prompts and outputs motor actions autoregressively. To train and evaluate VIMA,
-                        we develop a new simulation benchmark with thousands of procedurally-generated tabletop tasks
-                        with multimodal prompts, 600K+ expert trajectories for imitation learning, and four levels of
-                        evaluation protocol for systematic generalization. VIMA achieves strong scalability in both
-                        model capacity and data size. It outperforms prior SOTA methods in the hardest zero-shot
-                        generalization setting by up to 2.9x task success rate given the same training data. With 10x
-                        less training data, VIMA still performs 2.7x better than the top competing approach.
+                        Data-efficiency has always been an essential issue in pixel-based reinforcement learning (RL). As the agent 
+                        not only learns decision-making but also meaningful representations from images. The line of reinforcement 
+                        learning with data augmentation shows significant improvements in sample-efficiency. However, it is 
+                        challenging to guarantee the optimality invariant transformation, that is, the augmented data are readily 
+                        recognized as a completely different state by the agent. In the end, we propose a contrastive invariant 
+                        transformation (CoIT), a simple yet promising learnable data augmentation combined with standard model-free 
+                        algorithms to improve sample-efficiency. Concretely, the differentiable CoIT leverages original samples with 
+                        augmented samples and hastens the state encoder for a contrastive invariant embedding. We evaluate our 
+                        approach on DeepMind Control Suite and Atari100K. Empirical results verify advances using CoIT, enabling 
+                        it to outperform the new state-of-the-art on various tasks. Source code is available at 
+                        https://github.com/mooricAnna/CoIT.
                     </p>
                 </div>
             </div>
