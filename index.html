@@ -1,234 +1,695 @@
+<!DOCTYPE html>
+<html>
 <head>
-    <title>CoIT</title>
-    <meta name="author" content="On the Data-Efficiency with Contrastive Image Transformation in Reinforcement Learning">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta property="og:title" content="Nicklas Hansen">
-	<meta property="og:description" content="PhD student, UC San Diego">
-    <!-- <meta property="og:image" content="https://nicklashansen.github.io/files/me.jpeg"> -->
-	<meta property="og:url" content="https://nicklashansen.github.io/">
-	<meta name="twitter:card" content="summary_large_image">
-    <link rel="apple-touch-icon" href="files/ucsd-logo.png">
-    <link rel="icon" type="image/png" href="files/ucsd-logo.png">
-    <link rel="manifest" href="files/site.webmanifest">
-    <link rel="stylesheet" href="style.css">
-</head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>VIMA | General Robot Manipulation with Multimodal Prompts</title>
 
-<div class="header noselect">
-    <div class="content row">
-        <div class="header-profile-picture"></div>
-        <div class="header-text">
-            <div class="header-name">
-                <h1>On the Data-Efficiency with Contrastive Image Transformation in Reinforcement Learning</h1>
-            </div>
-            <div class="header-subtitle">
-                Sicong Liu
-            </div>
-            <div class="header-links">
-                <a class="btn" href="#contact">Email</a> /
-                <a class="btn" href="https://scholar.google.com/citations?hl=en&user=8wGH7wsAAAAJ&view_op=list_works&sortby=pubdate">Google Scholar</a> /
-                <a class="btn" href="https://github.com/nicklashansen">GitHub</a> /
-                <a class="btn" href="https://twitter.com/ncklashansen">Twitter</a> /
-                <a class="btn" href="https://www.linkedin.com/in/ncklas">LinkedIn</a> /
-                <a class="btn" href="files/cv.pdf">CV</a>
-            </div>
-        </div>
-    </div>
-</div>
-<div class="content" style="padding-bottom: 64px;">
-    <div>
-        <p>
-            I am a PhD student at <a href="https://ucsd.edu/">UC San Diego</a>, advised by Prof. <a href="https://xiaolonw.github.io/">Xiaolong Wang</a> and Prof. <a href="https://cseweb.ucsd.edu/~haosu/">Hao Su</a>. I interned at Meta AI (<a href="https://ai.facebook.com/">FAIR</a>) during 2022.
-            Before starting my PhD, I was a visiting student at <a href="https://www.berkeley.edu/">UC Berkeley</a> and a research intern at <a href="https://bair.berkeley.edu/">Berkeley AI Research</a>, where I was fortunate to work with Prof. <a href="https://cs.nyu.edu/~lp91/#">Lerrel Pinto</a>, Prof. <a href="https://xiaolonw.github.io/">Xiaolong Wang</a>, and Prof. <a href="https://people.eecs.berkeley.edu/~efros/">Alexei Efros</a>.<br/><br/>
-            I received my Bachelor's and Master's degrees from the Technical University of Denmark (<a href="https://www.dtu.dk/english">DTU</a>), where I worked with Prof. <a href="https://olewinther.github.io/">Ole Winther</a> and Prof. <a href="https://scholar.google.dk/citations?user=RQonsgMAAAAJ&hl=en">Morten M&oslash;rup</a>.
-            I have also spent time at Nanyang Technological University (<a href="https://www.ntu.edu.sg">NTUsg</a>) in lovely Singapore, as well as <a href="https://www.retune-dsp.com/">Retune-DSP</a> (acquired by <a href="https://www.nxp.com/">NXP</a>), and <a href="https://www.raffle.ai/">raffle.ai</a>.<br/><br/>
-        </p>
-    </div>
-    <div>
-        <h2 class="noselect">Research interest</h2>
-        <p>
-            I am broadly interested in research on the <span class="bold">generalization</span> and <span class="bold">adaptation</span> of neural agents. I believe AI in the future should be flexible, learn with little supervision, and learn continuously over their lifetime. I work with <span class="bold">reinforcement learning</span>, <span class="bold">robotics</span>, and <span class="bold">computer vision</span>.
-        </p>
-    </div>
-    <div>
-        <h2 class="noselect">Publications and preprints</h2>
-        <p>Papers sorted by recency. Representative papers are <span style="background-color: #fff8df">highlighted</span>.</p>
-        <div class="publication row clearfix">
-            <div class="row-media" style="background-image: url(files/lfs.png);"></div>
-            <div class="row-text">
-                <a class="publication-title bold" href="https://arxiv.org/abs/2212.05749">On Pre-Training for Visuo-Motor Control: Revisiting a Learning-from-Scratch Baseline</a><br/>
-                <span class="bold">Nicklas Hansen*</span>, Zhecheng Yuan*, Yanjie Ze*, Tongzhou Mu*, Aravind Rajeswaran+, Hao Su+, Huazhe Xu+, Xiaolong Wang+<br/>
-                <span class="italic">arXiv, 2022</span><br/>
-                <a class="btn btn-red" href="https://arxiv.org/abs/2212.05749">paper</a> / <a class="btn btn-dark" href="bibtex/hansen2022lfs.txt">bibtex</a>
-            </div>
-        </div>
-        <div class="highlight publication row clearfix">
-            <div class="row-media" style="background-image: url(files/modem.gif);"></div>
-            <div class="row-text">
-                <a class="publication-title bold" href="https://arxiv.org/abs/2212.05698">MoDem: Accelerating Visual Model-Based Reinforcement Learning with Demonstrations</a><br/>
-                <span class="bold">Nicklas Hansen</span>, Yixin Lin, Hao Su, Xiaolong Wang, Vikash Kumar, Aravind Rajeswaran<br/>
-                <span class="italic">International Conference on Learning Representations (<a href="https://iclr.cc">ICLR</a></span>), 2023<br/>
-                <a class="btn btn-orange" href="https://nicklashansen.github.io/modemrl">project page</a> / <a class="btn btn-red" href="https://arxiv.org/abs/2212.05698">paper</a> / <a class="btn" href="https://github.com/facebookresearch/modem/">code</a> / <a class="btn btn-dark" href="bibtex/hansen2022modem.txt">bibtex</a>
-            </div>
-        </div>
-        <div class="publication row clearfix">
-            <div class="row-media" style="background-image: url(files/xtra.gif);"></div>
-            <div class="row-text">
-                <a class="publication-title bold" href="https://arxiv.org/abs/2210.10763">On the Feasibility of Cross-Task Transfer with Model-Based Reinforcement Learning</a><br/>
-                Yifan Xu*, <span class="bold">Nicklas Hansen*</span>, Zirui Wang, Yung-Chieh Chan, Hao Su, Zhuowen Tu<br/>
-                <span class="italic">International Conference on Learning Representations (<a href="https://iclr.cc">ICLR</a></span>), 2023<br/>
-                <a class="btn btn-orange" href="https://nicklashansen.github.io/xtra">project page</a> / <a class="btn btn-red" href="https://arxiv.org/abs/2210.10763">arXiv</a> / <a class="btn" href="https://github.com/mlpc-ucsd/XTRA">code</a> / <a class="btn btn-dark" href="bibtex/xu2022xtra.txt">bibtex</a>
-            </div>
-        </div>
-        <div class="publication row clearfix">
-            <div class="row-media" style="background-image: url(files/3d4rl.gif);"></div>
-            <div class="row-text">
-                <a class="publication-title bold" href="https://arxiv.org/abs/2210.07241">Visual Reinforcement Learning with Self-Supervised 3D Representations</a><br/>
-                Yanjie Ze*, <span class="bold">Nicklas Hansen*</span>, Yinbo Chen, Mohit Jain, Xiaolong Wang<br/>
-                <span class="italic">Robotics and Automation Letters (<a href="https://www.ieee-ras.org/publications/ra-l">RA-L</a>)</span>, 2023<br/>
-                <a class="btn btn-orange" href="https://yanjieze.com/3d4rl">project page</a> / <a class="btn btn-red" href="https://arxiv.org/abs/2210.07241">arXiv</a> / <a class="btn" href="https://github.com/YanjieZe/rl3d">code</a> / <a class="btn btn-dark" href="bibtex/ze2022rl3d.txt">bibtex</a>
-            </div>
-        </div>
-        <div class="publication row clearfix">
-            <div class="row-media" style="background-image: url(files/graphirl.gif);"></div>
-            <div class="row-text">
-                <a class="publication-title bold" href="https://arxiv.org/abs/2207.14299">Graph Inverse Reinforcement Learning from Diverse Videos</a><br/>
-                Sateesh Kumar, Jonathan Zamora*, <span class="bold">Nicklas Hansen*</span>, Rishabh Jangir, Xiaolong Wang<br/>
-                <span class="italic">Conference on Robot Learning (<a href="https://corl2022.org">CoRL</a>)</span>, 2022 (<span class="bold" style="color: #f09228;">Oral</span>)</span><br/>
-                <a class="btn btn-orange" href="https://sateeshkumar21.github.io/GraphIRL">project page</a> / <a class="btn btn-red" href="https://arxiv.org/abs/2207.14299">arXiv</a> / <a class="btn btn-dark" href="bibtex/kumar2022inverse.txt">bibtex</a>
-            </div>
-        </div>
-        <div class="highlight publication row clearfix">
-            <div class="row-media" style="background-image: url(files/tdmpc.gif);"></div>
-            <div class="row-text">
-                <a class="publication-title bold" href="https://arxiv.org/abs/2203.04955">Temporal Difference Learning for Model Predictive Control</a><br/>
-                <span class="bold">Nicklas Hansen</span>, Xiaolong Wang*, Hao Su*<br/>
-                <span class="italic">International Conference on Machine Learning (<a href="https://icml.cc">ICML</a>)</span>, 2022<br/>
-                <a class="btn btn-orange" href="https://nicklashansen.github.io/td-mpc">project page</a> / <a class="btn btn-red" href="https://arxiv.org/abs/2203.04955">arXiv</a> / <a class="btn" href="https://nicklashansen.github.io/td-mpc/slides.pdf">slides</a> / <a class="btn" href="https://github.com/nicklashansen/tdmpc">code</a> / <a class="btn btn-dark" href="bibtex/hansen2022tdmpc.txt">bibtex</a>
-            </div>
-        </div>
-        <div class="publication row clearfix">
-            <div class="row-media" style="background-image: url(files/LookCloser.gif);"></div>
-            <div class="row-text">
-                <a class="publication-title bold" href="https://arxiv.org/abs/2201.07779">Look Closer: Bridging Egocentric and Third-Person Views with Transformers for Robotic Manipulation</a><br/>
-                Rishabh Jangir*, <span class="bold">Nicklas Hansen*</span>, Sambaran Ghosal, Mohit Jain, Xiaolong Wang<br/>
-                <span class="italic">Robotics and Automation Letters (<a href="https://www.ieee-ras.org/publications/ra-l">RA-L</a>)</span>, 2022<br/>
-                <span class="italic">International Conference on Robotics and Automation (<a href="https://www.ieee-ras.org/conferences-workshops/fully-sponsored/icra">ICRA</a></span>), 2022<br/>
-                <a class="btn btn-orange" href="https://jangirrishabh.github.io/lookcloser">project page</a> / <a class="btn btn-red" href="https://arxiv.org/abs/2201.07779">arXiv</a> / <a class="btn" href="https://github.com/jangirrishabh/look-closer">code</a> / <a class="btn btn-dark" href="bibtex/jangir2022look.txt">bibtex</a>
-            </div>
-        </div>
-        <div class="highlight publication row clearfix">
-            <div class="row-media" style="background-image: url(files/StabilizedQValueEstimation.gif);"></div>
-            <div class="row-text">
-                <a class="publication-title bold" href="https://arxiv.org/abs/2107.00644">Stabilizing Deep Q-Learning with ConvNets and Vision Transformers under Data Augmentation</a><br/>
-                <span class="bold">Nicklas Hansen</span>, Hao Su, Xiaolong Wang<br/>
-                <span class="italic">Conference on Neural Information Processing Systems (<a href="https://nips.cc">NeurIPS</a>)</span>, 2021<br/>
-                <a class="btn btn-orange" href="https://nicklashansen.github.io/SVEA">project page</a> / <a class="btn btn-red" href="https://arxiv.org/abs/2107.00644">arXiv</a> / <a class="btn" href="https://github.com/nicklashansen/dmcontrol-generalization-benchmark">code</a> / <a class="btn btn-dark" href="bibtex/hansen2021stabilizing.txt">bibtex</a>
-            </div>
-        </div>
-        <div class="publication row clearfix">
-            <div class="row-media" style="background-image: url(files/LocoTransformer.gif);"></div>
-            <div class="row-text">
-                <a class="publication-title bold" href="https://arxiv.org/abs/2107.03996">Learning Vision-Guided Quadrupedal Locomotion End-to-End with Cross-Modal Transformers</a><br/>
-                Ruihan Yang*, Minghao Zhang*, <span class="bold">Nicklas Hansen</span>, Huazhe Xu, Xiaolong Wang<br/>
-                <span class="italic">International Conference on Learning Representations (<a href="https://iclr.cc">ICLR</a></span>), 2022 (<span class="bold" style="color: #f09228;">Spotlight</span>)<br/>
-                <a class="btn btn-orange" href="https://rchalyang.github.io/LocoTransformer">project page</a> / <a class="btn btn-red" href="https://arxiv.org/abs/2107.03996">arXiv</a> / <a class="btn btn-dark" href="bibtex/yang2021learning.txt">bibtex</a>
-            </div>
-        </div>
-        <div class="publication row clearfix">
-            <div class="row-media" style="background-image: url(files/SoftDataAugmentation.gif);"></div>
-            <div class="row-text">
-                <a class="publication-title bold" href="https://arxiv.org/abs/2011.13389">Generalization in Reinforcement Learning by Soft Data Augmentation</a><br/>
-                <span class="bold">Nicklas Hansen</span>, Xiaolong Wang<br/>
-                <span class="italic">International Conference on Robotics and Automation (<a href="https://www.ieee-ras.org/conferences-workshops/fully-sponsored/icra">ICRA</a></span>), 2021<br/>
-                <a class="btn btn-orange" href="https://nicklashansen.github.io/SODA">project page</a> / <a class="btn btn-red" href="https://arxiv.org/abs/2011.13389">arXiv</a> / <a class="btn" href="https://github.com/nicklashansen/dmcontrol-generalization-benchmark">code</a> / <a class="btn btn-dark" href="bibtex/hansen2021softda.txt">bibtex</a>
-            </div>
-        </div>
-        <div class="highlight publication row clearfix">
-            <div class="row-media" style="background-image: url(files/SelfSupervisedPolicyAdaptation.gif);"></div>
-            <div class="row-text">
-                <a class="publication-title bold" href="https://arxiv.org/abs/2007.04309">Self-Supervised Policy Adaptation during Deployment</a><br/>
-                <span class="bold">Nicklas Hansen</span>, Rishabh Jangir, Yu Sun, Guillem Alenyà, Pieter Abbeel, Alexei A. Efros, Lerrel Pinto, Xiaolong Wang<br/>
-                <span class="italic">International Conference on Learning Representations (<a href="https://iclr.cc">ICLR</a></span>), 2021 (<span class="bold" style="color: #f09228;">Spotlight</span>)<br/>
-                <a class="btn btn-orange" href="https://nicklashansen.github.io/PAD">project page</a> / <a class="btn btn-red" href="https://arxiv.org/abs/2007.04309">arXiv</a> / <a class="btn btn-purple" href="https://bair.berkeley.edu/blog/2021/02/25/ss-adaptation">blog</a> / <a class="btn" href="https://github.com/nicklashansen/policy-adaptation-during-deployment">code</a> / <a class="btn btn-dark" href="bibtex/hansen2021deployment.txt">bibtex</a>
-            </div>
-        </div>
-        <div class="publication row clearfix">
-            <div class="row-media" style="background-image: url(files/robot-small.png); background-size: cover;"></div>
-            <div class="row-text">
-                <a class="publication-title bold" href="files/GeneralizationInVisualRL.pdf">Generalization in Visual Reinforcement Learning</a><br/>
-                <span class="bold">Nicklas Hansen</span><br/>
-                <span class="italic">Master Thesis, 2021</span><br/>
-                <a class="btn btn-red" href="files/GeneralizationInVisualRL.pdf">pdf</a> / <a class="btn btn-dark" href="bibtex/hansen2021gvrl.txt">bibtex</a>
-            </div>
-        </div>
-        <div class="publication row clearfix">
-            <div class="row-media" style="background-image: url(files/ShortTermBloodGlucosePrediction.png)"></div>
-            <div class="row-text">
-                <a class="publication-title bold" href="https://arxiv.org/abs/2002.02805">Short Term Blood Glucose Prediction based on Continuous Glucose Monitoring Data</a><br/>
-                Ali Mohebbi, Alexander R. Johansen, <span class="bold">Nicklas Hansen</span>, Peter E. Christensen, Jens M. Tarp, Morten L. Jensen, Henrik Bengtsson, Morten Mørup<br/>
-                <span class="italic">Engineering in Medicine and Biology Conference (<a href="https://embc.embs.org/2020">EMBC</a>)</span>, 2020<br/>
-                <a class="btn btn-red" href="https://arxiv.org/abs/2002.02805">arXiv</a> / <a class="btn btn-dark" href="bibtex/mohebbi2020shortterm.txt">bibtex</a>
+    <script>
+        var task_map = {
+            "simple-object-manipulation": "simple_object_manipulation",
+            "visual-goal-reaching": "visual_goal_reaching",
+            "novel-concept-grounding": "novel_concept_grounding",
+            "one-shot-video-imitation": "one_shot_video_imitation",
+            "visual-constraint-satisfaction": "visual_constraint_satisfaction",
+            "visual-reasoning": "visual_reasoning"
+        };
+
+        function updateDemoVideo(category) {
+            // var demo = document.getElementById("single-menu-demos").value;
+            var task = document.getElementById(category + "-menu-tasks").value;
+            var inst = document.getElementById(category + "-menu-instances").value;
+
+            console.log(task_map[category], task, inst)
+
+            var video = document.getElementById(category + "-single-task-video");
+            video.src = "assets/videos/demos/" +
+                task_map[category] +
+                "/" +
+                task +
+                "/" +
+                inst +
+                ".mp4";
+            video.playbackRate = 2.0;
+            video.play();
+        }
+    </script>
+
+    <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+          rel="stylesheet">
+
+    <link rel="stylesheet" href="./static/css/bulma.min.css">
+    <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+    <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+    <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+    <link rel="stylesheet" href="./static/css/academicons.min.css">
+    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+    <link rel="stylesheet" href="./static/css/index.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script defer src="./static/js/fontawesome.all.min.js"></script>
+    <script src="./static/js/bulma-carousel.min.js"></script>
+    <script src="./static/js/bulma-slider.min.js"></script>
+    <script src="./static/js/index.js"></script>
+</head>
+<body>
+
+
+<section class="hero">
+    <div class="hero-body">
+        <div class="container is-max-desktop">
+            <div class="columns is-centered">
+                <div class="column has-text-centered">
+                    <h1 class="title is-1 publication-title">VIMA: General Robot Manipulation with Multimodal
+                        Prompts</h1>
+                    <div class="is-size-5 publication-authors">
+            <span class="author-block">
+                <a target="_blank" href="https://yunfanj.com/">Yunfan&#160;Jiang</a><sup>1 2</sup>,
+                <a target="_blank" href="http://web.stanford.edu/~agrim/">Agrim&#160;Gupta</a><sup>2&dagger;</sup>,
+                <a target="_blank"
+                   href="https://zcczhang.github.io/">Zichen&#160;"Charles"&#160;Zhang</a><sup>3&dagger;</sup>,
+                <a target="_blank" href="https://guanzhi.me/">Guanzhi&#160;Wang</a><sup>1 4&dagger;</sup>,
+                <a target="_blank" href="">Yongqiang&#160;Dou</a><sup>5</sup>,
+                <a target="_blank" href="">Yanjun&#160;Chen</a><sup>2</sup>,
+                <br>
+                <a target="_blank" href="https://profiles.stanford.edu/fei-fei-li">Li&#160;Fei-Fei</a><sup>2</sup>,
+                <a target="_blank" href="http://tensorlab.cms.caltech.edu/users/anima/">Anima&#160;Anandkumar</a><sup>1 4</sup>,
+                <a target="_blank" href="https://www.cs.utexas.edu/~yukez/">Yuke&#160;Zhu</a><sup>1 6&#8225;</sup>,
+                <a target="_blank" href="https://jimfan.me/">Linxi&#160;"Jim"&#160;Fan</a><sup>1&#8225;</sup>
+            </span>
+                    </div>
+
+                    <div class="is-size-5 publication-authors">
+                        <span class="author-block"><sup>1</sup>NVIDIA, </span>
+                        <span class="author-block"><sup>2</sup>Stanford, </span>
+                        <span class="author-block"><sup>3</sup>Macalester College, </span>
+                        <span class="author-block"><sup>4</sup>Caltech, </span>
+                        <span class="author-block"><sup>5</sup>Tsinghua, </span>
+                        <span class="author-block"><sup>6</sup>UT Austin</span>
+                    </div>
+
+                    <div class="is-size-5 publication-authors">
+                        <span class="author-block"><sup>&dagger;</sup>Equal Contribution</span>
+                        <span class="author-block"><sup>&#8225;</sup>Equal Advising </span>
+                    </div>
+
+                    <div class="column has-text-centered">
+                        <div class="publication-links">
+                            <!-- TODO PDF Link. -->
+                            <span class="link-block">
+                <a target="_blank" href="https://arxiv.org/abs/2210.03094"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+
+                            <span class="link-block">
+                <a target="_blank" href="assets/vima_paper.pdf"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>PDF</span>
+                </a>
+              </span>
+                            <!-- Code Link. -->
+                            <span class="link-block">
+                <a target="_blank" href="https://github.com/vimalabs/VIMA"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                </a>
+                <a target="_blank" href="https://github.com/vimalabs/VIMA#pretrained-models"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fa fa-network-wired"></i>
+                  </span>
+                  <span>Models</span>
+                </a>
+                <a target="_blank" href="https://github.com/vimalabs/VimaBench"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-robot"></i>
+                  </span>
+                  <span>Benchmark</span>
+                </a>
+                <a target="_blank" href="https://huggingface.co/datasets/VIMA/VIMA-Data"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-database"></i>
+                  </span>
+                  <span>Dataset</span>
+                </a>
+              </span>
+                        </div>
+
+                    </div>
+                </div>
             </div>
         </div>
     </div>
-    <div>
-        <h2 class="noselect">Misc. open-source projects</h2>
-        <div class="publication row clearfix">
-            <div class="row-media" style="background-image: url(files/dmcontrol-gb.png);"></div>
-            <div class="row-text">
-                <a class="bold" href="https://github.com/nicklashansen/dmcontrol-generalization-benchmark">DMControl Generalization Benchmark<span class="stars">&#11088; 113</span></a><br/>
-                <span class="bold">Nicklas Hansen</span>, Xiaolong Wang<br/>
-                November 2020<br/>
-                <a class="btn btn-orange" href="https://nicklashansen.github.io/SODA/">project page</a> / <a class="btn btn-red" href="https://arxiv.org/abs/2011.13389">arXiv</a> / <a class="btn" href="https://github.com/nicklashansen/dmcontrol-generalization-benchmark">code</a> / <a class="btn btn-dark" href="bibtex/hansen2020softda.txt">bibtex</a>
-            </div>
-        </div>
-        <div class="publication row clearfix">
-            <div class="row-media" style="background-image: url(https://i.imgur.com/sGdC9nY.png);"></div>
-            <div class="row-text">
-                <a class="bold" href="https://github.com/nicklashansen/rnn_lstm_from_scratch">How to build RNNs and LSTMs from scratch with NumPy<span class="stars">&#11088; 205</span></a><br/>
-                <span class="bold">Nicklas Hansen</span>, Peter E. Christensen, Alexander R. Johansen<br/>
-                October 2019<br/>
-                <a class="btn btn-orange" href="https://colab.research.google.com/drive/1oSkZuIicbPPzzwWyP43vaj4CmMbwNp4u">colab</a> / <a class="btn" href="https://github.com/nicklashansen/rnn_lstm_from_scratch">code</a>
-            </div>
-        </div>
-        <div class="publication row clearfix">
-            <div class="row-media" style="background-image: url(https://raw.githubusercontent.com/nicklashansen/neural-net-optimization/master/results/loss_cifar_sgd.png);"></div>
-            <div class="row-text">
-                <a class="bold" href="https://github.com/nicklashansen/neural-net-optimization">Recent Optimization Algorithms for Deep Learning<span class="stars">&#11088; 60</span></a><br/>
-                <span class="bold">Nicklas Hansen</span>*, Christoffer Riis*<br/>
-                December 2019<br/>
-                <a class="btn" href="https://github.com/nicklashansen/neural-net-optimization">code</a>
-            </div>
-        </div>
-        <div class="publication row clearfix">
-            <div class="row-media" style="background-image: url(https://i.imgur.com/FlPshTH.png);"></div>
-            <div class="row-text">
-                <a class="bold" href="https://github.com/nicklashansen/voice-activity-detection">Voice Activity Detection in Noisy Environments<span class="stars">&#11088; 160</span></a><br/>
-                <span class="bold">Nicklas Hansen</span>*, Simon H. Albrechtsen*<br/>
-                December 2018<br/>
-                <a class="btn btn-red" href="https://github.com/nicklashansen/voice-activity-detection/blob/master/Paper.pdf">tech report</a> / <a class="btn" href="https://github.com/nicklashansen/voice-activity-detection">code</a> / <a class="btn btn-dark" href="bibtex/hansen2018vad.txt">bibtex</a>
+</section>
+
+<section class="hero is-light is-small">
+    <div class="hero-body">
+        <div class="container">
+            <div id="results-carousel" class="carousel results-carousel">
+                <div class="item item-sweep_without_exceeding">
+                    <video poster="" id="sweep_without_exceeding" autoplay controls muted loop height="100%"
+                           playbackRate=2.0>
+                        <source src="assets/videos/demos/visual_constraint_satisfaction/sweep_without_exceeding/1.mp4"
+                                type="video/mp4">
+                    </video>
+                </div>
+                <div class="item item-sweep_without_touching">
+                    <video poster="" id="sweep_without_touching" autoplay controls muted loop height="100%"
+                           playbackRate=2.0>
+                        <source src="assets/videos/demos/visual_goal_reaching/rearrange_then_restore/1.mp4"
+                                type="video/mp4">
+                    </video>
+                </div>
+                <div class="item item-rotate">
+                    <video poster="" id="rotate" autoplay controls muted loop height="100%">
+                        <source src="assets/videos/demos/one_shot_video_imitation/follow_motion/1.mp4"
+                                type="video/mp4">
+                    </video>
+                </div>
+                <div class="item item-scene_understanding">
+                    <video poster="" id="scene_understanding" autoplay controls muted loop height="100%">
+                        <source src="assets/videos/demos/novel_concept_grounding/twist/1.mp4"
+                                type="video/mp4">
+                    </video>
+                </div>
+                <div class="item item-simple_manipulation">
+                    <video poster="" id="simple_manipulation" autoplay controls muted loop height="100%">
+                        <source src="assets/videos/demos/visual_reasoning/manipulate_old_neighbor/1.mp4"
+                                type="video/mp4">
+                    </video>
+                </div>
+                <div class="item item-novel_adj">
+                    <video poster="" id="novel_adj" autoplay controls muted loop height="100%">
+                        <source src="assets/videos/demos/one_shot_video_imitation/follow_order/1.mp4"
+                                type="video/mp4">
+                    </video>
+                </div>
+                <div class="item item-novel_adj_and_noun">
+                    <video poster="" id="novel_adj_and_noun" autoplay controls muted loop height="100%">
+                        <source src="assets/videos/demos/simple_object_manipulation/scene_understanding/1.mp4"
+                                type="video/mp4">
+                    </video>
+                </div>
+                <div class="item item-novel_noun">
+                    <video poster="" id="novel_noun" autoplay controls muted loop height="100%">
+                        <source src="assets/videos/demos/visual_constraint_satisfaction/sweep_without_touching/1.mp4"
+                                type="video/mp4">
+                    </video>
+                </div>
+                <div class="item item-twist">
+                    <video poster="" id="twist" autoplay controls muted loop height="100%">
+                        <source src="assets/videos/demos/novel_concept_grounding/novel_adj/1.mp4"
+                                type="video/mp4">
+                    </video>
+                </div>
+                <div class="item item-follow_motion">
+                    <video poster="" id="follow_motion" autoplay controls muted loop height="100%">
+                        <source src="assets/videos/demos/simple_object_manipulation/simple_manipulation/1.mp4"
+                                type="video/mp4">
+                    </video>
+                </div>
+                <div class="item item-follow_order">
+                    <video poster="" id="follow_order" autoplay controls muted loop height="100%">
+                        <source src="assets/videos/demos/visual_goal_reaching/rearrange/1.mp4"
+                                type="video/mp4">
+                    </video>
+                </div>
+                <div class="item item-rearrange">
+                    <video poster="" id="rearrange" autoplay controls muted loop height="100%">
+                        <source src="assets/videos/demos/simple_object_manipulation/rotate/1.mp4"
+                                type="video/mp4">
+                    </video>
+                </div>
+                <div class="item item-manipulate_old_neighbor">
+                    <video poster="" id="manipulate_old_neighbor" autoplay controls muted loop height="100%">
+                        <source src="assets/videos/demos/visual_reasoning/same_color/1.mp4"
+                                type="video/mp4">
+                    </video>
+                </div>
+                <div class="item item-pick_in_order_then_restore">
+                    <video poster="" id="pick_in_order_then_restore" autoplay controls muted loop height="100%">
+                        <source src="assets/videos/demos/visual_reasoning/pick_in_order_then_restore/1.mp4"
+                                type="video/mp4">
+                    </video>
+                </div>
+                <div class="item item-same_color">
+                    <video poster="" id="same_color" autoplay controls muted loop height="100%">
+                        <source src="assets/videos/demos/novel_concept_grounding/novel_noun/1.mp4"
+                                type="video/mp4">
+                    </video>
+                </div>
+                <div class="item item-rearrange_then_restore">
+                    <video poster="" id="rearrange_then_restore" autoplay controls muted loop height="100%">
+                        <source src="assets/videos/demos/visual_reasoning/same_profile/1.mp4"
+                                type="video/mp4">
+                    </video>
+                </div>
+                <div class="item item-same_profile">
+                    <video poster="" id="same_profile" autoplay controls muted loop height="100%">
+                        <source src="assets/videos/demos/novel_concept_grounding/novel_adj_and_noun/1.mp4"
+                                type="video/mp4">
+                    </video>
+                </div>
             </div>
         </div>
     </div>
-    <div>
-        <h2 class="noselect">Press coverage</h2>
-        I have been mentioned in various media in connection with my research. Here's a few selected articles:
-        <div class="row clearfix" style="margin-top: 16px;">
-            <a href="https://generallyintelligent.com/podcast/2022-12-16-podcast-episode-25-nicklas-hansen/" class="press row-media" style="background-image: url(files/generallyintelligent.png)"></a>
-            <a href="https://bdtechtalks.com/2022/04/04/reinforcement-learning-td-mpc/" class="press row-media" style="background-image: url(files/bdtalks.png)"></a>
-            <a href="https://bair.berkeley.edu/blog/2021/02/25/ss-adaptation/" class="press row-media" style="background-image: url(files/bair.png)"></a>
-            <a href="https://blog.deeplearning.ai/blog/the-batch-predicting-car-crashes-profiting-from-deepfakes-piloting-drone-swarms-grading-data" class="press row-media" style="background-image: url(https://i.imgur.com/eoASzgo.png)"></a>
+</section>
+
+
+<section class="section">
+    <div class="container is-max-desktop">
+        <!-- Abstract. -->
+        <div class="columns is-centered has-text-centered">
+            <div class="column">
+                <h2 class="title is-3">Abstract</h2>
+                <div class="content has-text-justified">
+                    <p style="font-size: 125%">
+                        Prompt-based learning has emerged as a successful paradigm in natural language processing, where
+                        a single general-purpose language model can be instructed to perform any task specified by input
+                        prompts. Yet task specification in robotics comes in various forms, such as imitating one-shot
+                        demonstrations, following language instructions, and reaching visual goals. They are often
+                        considered different tasks and tackled by specialized models. This work shows that we can
+                        express a wide spectrum of robot manipulation tasks with <i>multimodal prompts</i>, interleaving
+                        textual and visual tokens. We design a transformer-based generalist robot agent, VIMA, that
+                        processes these prompts and outputs motor actions autoregressively. To train and evaluate VIMA,
+                        we develop a new simulation benchmark with thousands of procedurally-generated tabletop tasks
+                        with multimodal prompts, 600K+ expert trajectories for imitation learning, and four levels of
+                        evaluation protocol for systematic generalization. VIMA achieves strong scalability in both
+                        model capacity and data size. It outperforms prior SOTA methods in the hardest zero-shot
+                        generalization setting by up to 2.9x task success rate given the same training data. With 10x
+                        less training data, VIMA still performs 2.7x better than the top competing approach.
+                    </p>
+                </div>
+            </div>
         </div>
     </div>
-    <div class="noselect">
-        <a id="contact"></a>
-        <h2>Contact</h2>
-        You are very welcome to contact me regarding my research. I typically respond within a few days.<br/>
-        I can be contacted directly at <span class="bold">hello</span> [at] <span class="bold">nicklashansen</span> 。com
+</section>
+
+<section class="section">
+    <div class="container is-max-widescreen">
+        <div class="rows">
+            <div class="rows is-centered ">
+                <div class="row is-full-width">
+                    <img src="assets/images/pull.png" class="interpolation-image"
+                         alt="" style="display: block; margin-left: auto; margin-right: auto"/>
+                    <span style="font-size: 110%"><b>Multimodal prompts for task specification.</b> We observe that many robot manipulation tasks can be expressed as <i>multimodal prompts</i> that interleave language and image/video frames. We propose VIMA, an embodied agent model capable of processing mulitimodal prompts (left) and controlling a robot arm to solve the task (right).</span>
+                </div>
+            </div>
+        </div>
     </div>
-</div>
-<div class="footer noselect">
-    <div class="footer-content">
-        &copy; 2022 Nicklas Hansen. No web trackers. Design is my own. You are welcome to fork it <a style="color: white; text-decoration: underline;" href="https://github.com/nicklashansen/nicklashansen.github.io">here</a>.
+</section>
+
+<!--Model-->
+<section class="section">
+    <div class="container is-max-widescreen">
+        <div class="rows">
+            <div class="rows is-centered ">
+                <div class="row is-full-width">
+                    <h2 class="title is-3"><span
+                            class="dvima">VIMA: Visuomotor Attention Model</span></h2>
+                    <video poster="" autoplay controls muted loop height="100%">
+                        <source src="assets/videos/vima_arch_animation.mp4"
+                                type="video/mp4">
+                    </video>
+                    <span style="font-size: 110%">
+<span style="font-weight: bold">VIMA architecture.</span> We encode the multimodal prompts with a pre-trained T5 model, and condition the robot controller on the prompt through cross-attention layers. The controller is a causal transformer decoder consisting of alternating self and cross attention layers that predicts motor commands conditioned on prompts and interaction history.</span>
+                </div>
+            </div>
+
+        </div>
     </div>
-</div>
+</section>
+
+<section class="section">
+    <div class="container is-max-widescreen">
+
+        <div class="rows">
+            <div class="rows is-centered ">
+                <div class="row is-full-width">
+                    <h2 class="title is-3"><span
+                            class="dvima">VIMA-Bench: Benchmark for Multimodal Robot Learning</span></h2>
+                    <span style="font-size: 125%">
+                        We provide 17 representative meta-tasks with multimodal prompt templates, which can be procedurally instantiated into thousands of individual tasks by various combinations of textures and tabletop objects.
+                    </span>
+
+                    <br>
+                    <br>
+                    <br>
+
+                    <div class="columns">
+                        <!-- Simple Object Manipulation -->
+                        <div class="column has-text-left">
+                            <h3 class="title is-5">Simple Object Manipulation</h3>
+                            <div class="select is-medium">
+                                <select id="simple-object-manipulation-menu-tasks"
+                                        onchange="updateDemoVideo('simple-object-manipulation')">
+                                    <option value="simple_manipulation" selected="selected">Visual Manipulation</option>
+                                    <option value="rotate">Rotate</option>
+                                    <option value="scene_understanding">Scene Understanding</option>
+                                </select>
+                            </div>
+                            <div class="select is-medium">
+                                <select id="simple-object-manipulation-menu-instances"
+                                        onchange="updateDemoVideo('simple-object-manipulation')">
+                                    <option value="1" selected="selected">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                </select>
+                            </div>
+                            <video id="simple-object-manipulation-single-task-video"
+                                   controls
+                                   muted
+                                   autoplay
+                                   loop
+                                   width="100%">
+                                <source src="assets/videos/demos/simple_object_manipulation/simple_manipulation/1.mp4"
+                                        type="video/mp4">
+                            </video>
+                        </div>
+
+                        <!-- Visual Goal Reaching -->
+                        <div class="column has-text-left">
+                            <h3 class="title is-5">Visual Goal Reaching</h3>
+                            <div class="select is-medium">
+                                <select id="visual-goal-reaching-menu-tasks"
+                                        onchange="updateDemoVideo('visual-goal-reaching')">
+                                    <option value="rearrange" selected="selected">Rearrange</option>
+                                    <option value="rearrange_then_restore">Rearrange Then Restore</option>
+                                </select>
+                            </div>
+                            <div class="select is-medium">
+                                <select id="visual-goal-reaching-menu-instances"
+                                        onchange="updateDemoVideo('visual-goal-reaching')">
+                                    <option value="1" selected="selected">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                </select>
+                            </div>
+                            <video id="visual-goal-reaching-single-task-video"
+                                   controls
+                                   muted
+                                   autoplay
+                                   loop
+                                   width="100%">
+                                <source src="assets/videos/demos/visual_goal_reaching/rearrange/1.mp4"
+                                        type="video/mp4">
+                            </video>
+                        </div>
+
+
+                    </div>
+
+                    <br>
+                    <div class="columns">
+                        <!-- Novel Concept Grounding -->
+                        <div class="column has-text-left">
+                            <h3 class="title is-5">Novel Concept Grounding</h3>
+                            <div class="select is-medium">
+                                <select id="novel-concept-grounding-menu-tasks"
+                                        onchange="updateDemoVideo('novel-concept-grounding')">
+                                    <option value="novel_adj_and_noun" selected="selected">Novel Adjective and Noun
+                                    </option>
+                                    <option value="novel_adj">Novel Adjective</option>
+                                    <option value="novel_noun">Novel Noun</option>
+                                    <option value="twist">Twist</option>
+                                </select>
+                            </div>
+                            <div class="select is-medium">
+                                <select id="novel-concept-grounding-menu-instances"
+                                        onchange="updateDemoVideo('novel-concept-grounding')">
+                                    <option value="1" selected="selected">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                </select>
+                            </div>
+                            <video id="novel-concept-grounding-single-task-video"
+                                   controls
+                                   muted
+                                   autoplay
+                                   loop
+                                   width="100%">
+                                <source src="assets/videos/demos/novel_concept_grounding/novel_adj_and_noun/1.mp4"
+                                        type="video/mp4">
+                            </video>
+                        </div>
+
+                        <!-- One Shot Video Imitation -->
+                        <div class="column has-text-left">
+                            <h3 class="title is-5">One-shot Video Imitation</h3>
+                            <div class="select is-medium">
+                                <select id="one-shot-video-imitation-menu-tasks"
+                                        onchange="updateDemoVideo('one-shot-video-imitation')">
+                                    <option value="follow_motion" selected="selected">Follow Motion</option>
+                                    <option value="follow_order">Follow Order</option>
+                                </select>
+                            </div>
+                            <div class="select is-medium">
+                                <select id="one-shot-video-imitation-menu-instances"
+                                        onchange="updateDemoVideo('one-shot-video-imitation')">
+                                    <option value="1" selected="selected">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                </select>
+                            </div>
+                            <video id="one-shot-video-imitation-single-task-video"
+                                   controls
+                                   muted
+                                   autoplay
+                                   loop
+                                   width="100%">
+                                <source src="assets/videos/demos/one_shot_video_imitation/follow_motion/1.mp4"
+                                        type="video/mp4">
+                            </video>
+                        </div>
+                    </div>
+
+                    <br>
+                    <div class="columns">
+                        <!-- Visual Constraint Satisfaction -->
+                        <div class="column has-text-left">
+                            <h3 class="title is-5">Visual Constraint Satisfaction</h3>
+                            <div class="select is-medium">
+                                <select id="visual-constraint-satisfaction-menu-tasks"
+                                        onchange="updateDemoVideo('visual-constraint-satisfaction')">
+                                    <option value="sweep_without_exceeding" selected="selected">Sweep without
+                                        Exceeding
+                                    </option>
+                                    <option value="sweep_without_touching">Sweep without Touching</option>
+                                </select>
+                            </div>
+                            <div class="select is-medium">
+                                <select id="visual-constraint-satisfaction-menu-instances"
+                                        onchange="updateDemoVideo('visual-constraint-satisfaction')">
+                                    <option value="1" selected="selected">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                </select>
+                            </div>
+                            <video id="visual-constraint-satisfaction-single-task-video"
+                                   controls
+                                   muted
+                                   autoplay
+                                   loop
+                                   playbackRate="2.0"
+                                   width="100%">
+                                <source src="assets/videos/demos/visual_constraint_satisfaction/sweep_without_exceeding/1.mp4"
+                                        type="video/mp4">
+                            </video>
+                        </div>
+
+                        <!-- Visual Reasoning -->
+                        <div class="column has-text-left">
+                            <h3 class="title is-5">Visual Reasoning</h3>
+                            <div class="select is-medium">
+                                <select id="visual-reasoning-menu-tasks" onchange="updateDemoVideo('visual-reasoning')">
+                                    <option value="manipulate_old_neighbor" selected="selected">Manipulate Old
+                                        Neighbor
+                                    </option>
+                                    <option value="pick_in_order_then_restore">Pick in Order Then Restore</option>
+                                    <option value="same_color">Same Texture</option>
+                                    <option value="same_profile">Same Shape</option>
+                                </select>
+                            </div>
+                            <div class="select is-medium">
+                                <select id="visual-reasoning-menu-instances"
+                                        onchange="updateDemoVideo('visual-reasoning')">
+                                    <option value="1" selected="selected">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                </select>
+                            </div>
+                            <video id="visual-reasoning-single-task-video"
+                                   controls
+                                   muted
+                                   autoplay
+                                   loop
+                                   width="100%">
+                                <source src="assets/videos/demos/visual_reasoning/manipulate_old_neighbor/1.mp4"
+                                        type="video/mp4">
+                            </video>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!--Experiments-->
+<section class="section">
+    <div class="container is-max-widescreen">
+        <div class="rows">
+            <div class="rows is-centered ">
+                <div class="row is-full-width">
+                    <h2 class="title is-3"><span
+                            class="dvima">Experiments</span></h2>
+
+                    <p style="font-size: 125%">
+                        We answer three main questions during experiments:
+                    <ul style="font-size: 125%; padding-left: 5%">
+                        <li>(1) How does VIMA compare with prior SOTA transformer-based agents (<a target="_blank"
+                                                                                                   href="https://www.deepmind.com/publications/a-generalist-agent">Gato</a>,
+                            <a target="_blank"
+                               href="https://www.deepmind.com/blog/tackling-multiple-tasks-with-a-single-visual-language-model">Flamingo</a>,
+                            and <a target="_blank" href="https://arxiv.org/abs/2106.01345">Decision Transformer</a>) on
+                            a
+                            diverse collection of multimodal-prompted tasks?
+                        </li>
+                        <li>(2) What are the <span style="font-weight: bold">scaling properties</span> of our approach
+                            in
+                            model capacity and data size?
+                        </li>
+                        <li>(3) How do different visual tokenizers, prompt conditioning, and prompt encoding affect
+                            decision
+                            making?
+                        </li>
+
+                    </ul>
+                    </p>
+                    <br>
+                    <br>
+
+                    <h3 class="title is-4"><span
+                            class="dvima">Evaluation Results</span></h3>
+
+                    <img src="assets/images/scalability.png" class="interpolation-image"
+                         alt="" style="display: block; margin-left: auto; margin-right: auto"/>
+                    <span style="font-size: 110%">
+                        <span style="font-weight: bold">Scaling model and data</span>. <i>Top:</i> We compare performance of different methods with model sizes ranging from 2M to 200M parameters. Across all model sizes and generalization levels VIMA outperforms prior works. <i>Bottom:</i> For a fixed model size of 92M parameters we compare the effect of imitation learning dataset size of 0.1%, 1%, 10%, and full imitation data. VIMA is extremely sample efficient and can achieve performance comparable to other methods with 10&times; less data.
+                    </span>
+                    <br>
+                    <br>
+                    <br>
+
+                    <h3 class="title is-4"><span
+                            class="dvima">Ablation Studies </span></h3>
+
+                    <br>
+
+                    <img src="assets/images/ablation_input_process.png" class="interpolation-image"
+                         alt="" style="display: block; margin-left: auto; margin-right: auto"/>
+                    <span style="font-size: 110%">
+                        <span style="font-weight: bold">Ablation on visual tokenizers.</span> We compare the performance of VIMA-200M model across different visual tokenizers. Our proposed object tokens outperform all methods that learn directly from raw pixels, and <i>Object Perceiver</i> that downsamples the object sequence to a fixed number of tokens.
+                    </span>
+
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+
+                    <img src="assets/images/global_seq_mod.png" class="interpolation-image"
+                         alt="" style="display: block; margin-left: auto; margin-right: auto"/>
+                    <span style="font-size: 110%">
+                        <span style="font-weight: bold">Ablation on prompt conditioning. </span>We compare our method (<i>xattn</i>: cross-attention prompt conditioning) with a vanilla transformer decoder (<i>gpt-decoder</i>) across different model sizes. Cross-attention is especially helpful in low-parameter regime and for harder generalization tasks.
+                    </span>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!--Conclusion-->
+<section class="section">
+    <div class="container is-max-widescreen">
+        <div class="rows">
+            <div class="rows is-centered ">
+                <div class="row is-full-width">
+                    <h2 class="title is-3"><span
+                            class="dvima">Conclusion</span></h2>
+
+                    <p style="font-size: 125%">
+                        Similar to GPT-3, a generalist robot agent should have an intuitive and expressive interface for
+                        human users to convey their intent. In this work, we introduce a novel <i>multimodal</i>
+                        prompting formulation that converts diverse robot manipulation tasks into a uniform sequence
+                        modeling problem. We propose VIMA, a conceptually simple transformer-based agent capable of
+                        solving tasks like visual goal, one-shot video imitation, and novel concept grounding with a
+                        single model. VIMA exhibits superior model and data scaling properties, and provides a strong
+                        starting point for future work.
+                    </p>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+<section class="section" id="BibTeX">
+    <div class="container is-max-widescreen content">
+        <h2 class="title">BibTeX</h2>
+        <pre><code>@article{jiang2022vima,
+  title   = {VIMA: General Robot Manipulation with Multimodal Prompts},
+  author  = {Yunfan Jiang and Agrim Gupta and Zichen Zhang and Guanzhi Wang and Yongqiang Dou and Yanjun Chen and Li Fei-Fei and Anima Anandkumar and Yuke Zhu and Linxi Fan},
+  year    = {2022},
+  journal = {arXiv preprint arXiv: Arxiv-2210.03094}
+}</code></pre>
+    </div>
+</section>
+
+<footer class="footer">
+    <div class="container">
+        <div class="columns is-centered">
+            <div class="column">
+                <div class="content has-text-centered">
+                    <p>
+                        Website template borrowed from <a
+                            href="https://github.com/nerfies/nerfies.github.io">NeRFies</a> and <a
+                            href="https://github.com/cliport/cliport.github.io">CLIPort</a>.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>
