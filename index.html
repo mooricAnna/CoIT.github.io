@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>On the Data-Efficiency with Contrastive Image Transformation in Reinforcement Learning</title>
 
-    <script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
         var task_map = {
             "simple-object-manipulation": "simple_object_manipulation",
             "visual-goal-reaching": "visual_goal_reaching",
@@ -55,7 +55,8 @@
 </head>
 <body>
 
-
+<header style="background-color:hsl(210, 27%, 96%);width:100%;margin:auto;">
+    <div class="container">
 <section class="hero">
     <div class="hero-body">
         <div class="container is-max-desktop">
@@ -164,8 +165,10 @@
         </div>
     </div>
 </section>
+    </div>
+</header>
 
-<section class="hero is-light is-small">
+<!-- <section class="hero is-light is-small">
     <div class="hero-body">
         <div class="container">
             <div id="results-carousel" class="carousel results-carousel">
@@ -276,8 +279,9 @@
             </div>
         </div>
     </div>
-</section>
-
+</section> -->
+<!-- <div style="border:1px groove #CCC"> -->
+<!-- <hr width="1000" style="margin-left: auto; margin-right: auto"> -->
 
 <section class="section">
     <div class="container is-max-desktop">
@@ -286,7 +290,7 @@
             <div class="column">
                 <h2 class="title is-3">Abstract</h2>
                 <div class="content has-text-justified">
-                    <p style="font-size: 125%">
+                    <p style="font-size: 125%; width: 83%; height: auto; margin-left: auto; margin-right: auto">
                         Data-efficiency has always been an essential issue in pixel-based reinforcement learning (RL). As the agent 
                         not only learns decision-making but also meaningful representations from images. The line of reinforcement 
                         learning with data augmentation shows significant improvements in sample-efficiency. However, it is 
@@ -305,24 +309,130 @@
     </div>
 </section>
 
+<!-- <div style="border:1px solid #CCC; width: 70%; height: auto; margin-left: auto; margin-right: auto"> -->
+<hr width="1150" style="margin-left: auto; margin-right: auto">
+
+<!-- Method -->
 <section class="section">
     <div class="container is-max-widescreen">
-        <div class="rows">
-            <div class="rows is-centered ">
-                <div class="row is-full-width">
+        <div class="row">
+            <!-- <div class="rows is-centered has-text-centered"> -->
+            <div class="rows is-centered">
+                    <h2 class="title is-3">
+                        <span class="dvima">
+                            <!-- &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; -->
+                            Method
+                        </span>
+                    </h2>
+
+                <h3 class="title is-4">
+                        <span class="dvima">
+                        <!-- &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; -->
+                        Learnable Invariant Transformation
+                    </span>
+                </h3>
+                <div class="content has-text-justified">
+                    <p style="font-size: 110%; margin-left: auto; margin-right: auto">
+                        Our method, <b>CoIT</b> introduces a learnable image augmentation to achieve an invariant image transformation.
+                        We propose a theoretical analysis of how a learnable invariant image transformation can approximate
+                        a stationary distribution over the transformed data by the optimal invariant metric, thus learning
+                        better representations.
+                    </p>
+                
+                <img src="assets/images/lemma.png" style="width: 49%" float="left"/>    
+                <img src="assets/images/theo_coit.png" style=" width: 49%" float="left"/>
+                <!-- <span style="font-size: 110%">
+                    <span style="font-weight: bold">Scaling model and data</span>. <i>Top:</i> We compare performance of different methods with model sizes ranging from 2M to 200M parameters. Across all model sizes and generalization levels VIMA outperforms prior works. <i>Bottom:</i> For a fixed model size of 92M parameters we compare the effect of imitation learning dataset size of 0.1%, 1%, 10%, and full imitation data. VIMA is extremely sample efficient and can achieve performance comparable to other methods with 10&times; less data.
+                </span> -->
+                <!-- <br> -->
+                <h3 class="title is-4">
+                    <span class="dvima">
+                    <!-- &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; -->
+                    Stabilizing Reward Function
+                    </span>
+                </h3>   
+                <p style="font-size: 110%; margin-left: auto; margin-right: auto">
+                    To further stabilize the reward function, we propose a mixed CoIT that samples multiple
+                    transformed data from the learned distribution, and mix up them together for model training.
+                </p>
+                    <div class="content has-text-justified">
+                        <img src="assets/images/mixed_coit.png" class="interpolation-image" alt=""
+                        style="display: block; width: 75%; margin-left: auto; margin-right: auto"/>  
+                <h3 class="title is-4">
+                    <span class="dvima">
+                        Framework Design
+                    </span>
+                </h3> 
+                <p style="font-size: 110%; margin-left: auto; margin-right: auto">
+                    We present a new framework with normalization variants to ensure above discussed learning guarantees by optimizing
+                    paraneters. Below are key points of our method.
+
+                    <ul style="font-size: 110%">
+                        <li> We borrow a similar idea from <a href="https://arxiv.org/abs/1912.08795"><span>Yin et al.</span></a> to 
+                            regularize and smooth the distribution shift between
+                             the transformed and overall data. We use the statistical data stored in the BN layers to approximate
+                             the distribution of the overall data,
+                             <br>
+                             <!-- <div class="row">
+                                <div class="rows is-centered has-text-centered"> -->
+                                <!-- <div class="rows is-centered">
+                             \(         
+                            \mathcal{K}_\omega(\mathbf{x}_t')= \sum_{l} \left\|\tilde{\mu}(\mathbf{x}_t')-\mathbb{E}(\tilde{\mu}_l(\mathbf{x})|\mathcal{O}) \right\|_2 + 
+                             \sum_{l} \left\|\tilde{\sigma}^2(\mathbf{x}_t')-\mathbb{E}(\tilde{\sigma}_l^2(\mathbf{x})|\mathcal{O}) \right\|_2
+                              \)
+                                </div> -->
+                             <!-- </div> -->
+                             <img src="assets/images/bn.png" class="interpolation-image"
+                         alt="" style="display: block; margin-left: auto; margin-right: auto; 
+                         width: 65%; height: auto"/>
+                         where \(\tilde{\mu}(\mathbf{x}_t')\) and \(\tilde{\sigma}^2(\mathbf{x}_t')\) are the <i>mean</i> and 
+                         <i>variance</i> of the transformed data and \(\omega\) represents the parameters of the learnable image
+                         transformation. The expectation terms \(\mathbb{E}(\cdot)\) denotes the statistical estimation of the
+                         batch-wise data stored in the \(l\)-th conv layer, and \(\mathcal{O}\) is the given observations.
+                        </li>
+                        <li> We utilize the similarity metric proposed by <a href="https://arxiv.org/abs/2002.05709"><span>Chen et al.</span></a> for learning the encoder that encodes the
+                            observations into latent space to meet the invariant transformation,
+                            <img src="assets/images/byol.png" class="interpolation-image"
+                         alt="" style="display: block; margin-left: auto; margin-right: auto; 
+                         width: 70%; height: auto"/>
+                         Here \(\bar{\xi}\) denotes the momentum version of parameters \(\xi\), and \(\mathcal{D}\) indicates the replay buffer.
+                        </li>
+                        <li> We update the critic network with transformed data \(\mathbf{x}_t'\) and \(\mathbf{x}_{t+n}'\) to 
+                            minimize the TD error for <i>n</i>-steps returns,
+                            <img src="assets/images/critic.png" class="interpolation-image"
+                         alt="" style="display: block; margin-left: auto; margin-right: auto; 
+                         width: 70%; height: auto"/>
+                        </li>
+
+                    </ul>
+                    </p>
+                    <p style="font-size: 110%; margin-left: auto; margin-right: auto">
+                    Eventually, we give the unified objective function as the full version of the CoIT,
+                    where \(\alpha \) and \(\lambda\) are hyper-parameters and the overall architecture is presented below.
+                    <br>
+                    <!-- <br> -->
+                    <img src="assets/images/overall.png" class="interpolation-image"
+                         alt="" style="display: block; margin-left: auto; margin-right: auto; 
+                         width: 40%; height: auto"/>
+                    <!-- where \(\alpha \) and \(\lambda\) are hyper-parameters and the overall architecture is presented below. -->
+                </p>
                     <img src="assets/images/pull.png" class="interpolation-image"
                          alt="" style="display: block; margin-left: auto; margin-right: auto; 
                          width: 70%; height: auto"/>
-                    <span style="font-size: 110%; display: block; margin-left: auto; margin-right: auto; 
-                    width: 83%; height: auto">
-                    <b>Multimodal prompts for task specification.</b> We observe that many robot manipulation tasks can be expressed as <i>multimodal prompts</i> that interleave language and image/video frames. We propose VIMA, an embodied agent model capable of processing mulitimodal prompts (left) and controlling a robot arm to solve the task (right).</span>
+                    <p style="font-size: 100%; display: block; margin-left: auto; margin-right: auto; 
+                    width: 77%; height: auto">
+                    <b>Overall architecture of CoIT.</b> The observations are transformed following a Gaussian distribution 
+                    \(\mathcal{G}(\mu, \sigma)\) and encoded by the state encoder \(g_\xi\).
+                    The observation encoder \(g_{\bar{\xi}}\) and projection \(f_{\bar{\xi}}\) are the exponentially moving average 
+                    version of the state encoder and projection.
+                    </p>
                 </div>
             </div>
         </div>
     </div>
 </section>
 
-<!--Model-->
+<!-- Model
 <section class="section">
     <div class="container is-max-widescreen">
         <div class="rows">
@@ -341,16 +451,19 @@
 
         </div>
     </div>
-</section>
+</section> -->
+
+<!-- <hr width="1150" style="margin-left: auto; margin-right: auto">
 
 <section class="section">
     <div class="container is-max-widescreen">
 
-        <div class="rows">
-            <div class="rows is-centered ">
+        <div class="row">
+            <div class="rows is-centered has-text-centered">
                 <div class="row is-full-width">
                     <h2 class="title is-3"><span
                             class="dvima">VIMA-Bench: Benchmark for Multimodal Robot Learning</span></h2>
+                    <div class="content has-text-justified">
                     <span style="font-size: 125%">
                         We provide 17 representative meta-tasks with multimodal prompt templates, which can be procedurally instantiated into thousands of individual tasks by various combinations of textures and tabletop objects.
                     </span>
@@ -360,7 +473,7 @@
                     <br>
 
                     <div class="columns">
-                        <!-- Simple Object Manipulation -->
+                        Simple Object Manipulation
                         <div class="column has-text-left">
                             <h3 class="title is-5">Simple Object Manipulation</h3>
                             <div class="select is-medium">
@@ -392,7 +505,7 @@
                             </video>
                         </div>
 
-                        <!-- Visual Goal Reaching -->
+                        Visual Goal Reaching
                         <div class="column has-text-left">
                             <h3 class="title is-5">Visual Goal Reaching</h3>
                             <div class="select is-medium">
@@ -428,7 +541,7 @@
 
                     <br>
                     <div class="columns">
-                        <!-- Novel Concept Grounding -->
+                        Novel Concept Grounding
                         <div class="column has-text-left">
                             <h3 class="title is-5">Novel Concept Grounding</h3>
                             <div class="select is-medium">
@@ -462,7 +575,7 @@
                             </video>
                         </div>
 
-                        <!-- One Shot Video Imitation -->
+                        One Shot Video Imitation
                         <div class="column has-text-left">
                             <h3 class="title is-5">One-shot Video Imitation</h3>
                             <div class="select is-medium">
@@ -496,7 +609,7 @@
 
                     <br>
                     <div class="columns">
-                        <!-- Visual Constraint Satisfaction -->
+                        Visual Constraint Satisfaction
                         <div class="column has-text-left">
                             <h3 class="title is-5">Visual Constraint Satisfaction</h3>
                             <div class="select is-medium">
@@ -530,7 +643,7 @@
                             </video>
                         </div>
 
-                        <!-- Visual Reasoning -->
+                        Visual Reasoning
                         <div class="column has-text-left">
                             <h3 class="title is-5">Visual Reasoning</h3>
                             <div class="select is-medium">
@@ -569,75 +682,102 @@
 
         </div>
     </div>
-</section>
+</section> -->
+
+<hr width="1150" style="margin-left: auto; margin-right: auto">
 
 <!--Experiments-->
 <section class="section">
     <div class="container is-max-widescreen">
         <div class="rows">
-            <div class="rows is-centered ">
+            <div class="rows is-centered">
                 <div class="row is-full-width">
-                    <h2 class="title is-3"><span
-                            class="dvima">Experiments</span></h2>
-
+                    <h2 class="title is-3">
+                        <span class="dvima">
+                            <!-- &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; -->
+                            Experiments
+                        </span>
+                    </h2>
+                    <div class="content has-text-justified">
                     <p style="font-size: 125%">
-                        We answer three main questions during experiments:
-                    <ul style="font-size: 125%; padding-left: 5%">
-                        <li>(1) How does VIMA compare with prior SOTA transformer-based agents (<a target="_blank"
-                                                                                                   href="https://www.deepmind.com/publications/a-generalist-agent">Gato</a>,
-                            <a target="_blank"
-                               href="https://www.deepmind.com/blog/tackling-multiple-tasks-with-a-single-visual-language-model">Flamingo</a>,
-                            and <a target="_blank" href="https://arxiv.org/abs/2106.01345">Decision Transformer</a>) on
-                            a
-                            diverse collection of multimodal-prompted tasks?
+                        We benchmark our method on the DeepMind control suite and compare CoIT with prior model-free methods which
+                        use data augmentation and contrastive learning to improve data-efficiency:
+                    <ul style="font-size: 125%">
+                        <li> <a href="https://arxiv.org/abs/2107.09645"><span>DrQ-v2</span></a>: introducing a simple data augmentation called <i>random shift</i> into a 
+                            fine-tuned DDPG.
                         </li>
-                        <li>(2) What are the <span style="font-weight: bold">scaling properties</span> of our approach
-                            in
-                            model capacity and data size?
+                        <li> <a href="https://arxiv.org/abs/2004.04136"><span>CURL</span></a>: combining SAC with a self-supervised learning framework.
                         </li>
-                        <li>(3) How do different visual tokenizers, prompt conditioning, and prompt encoding affect
-                            decision
-                            making?
+                        <li> Vanilla SAC and DDPG that directly trained from the image input
                         </li>
 
                     </ul>
                     </p>
-                    <br>
-                    <br>
+                    <p style="font-size: 125%">
+                        We also present ablation studies to show the details of our method.
+                    </p>
+                    <!-- <br> -->
+                    <!-- <br> -->
 
                     <h3 class="title is-4"><span
-                            class="dvima">Evaluation Results</span></h3>
-
-                    <img src="assets/images/scalability.png" class="interpolation-image"
+                            class="dvima">
+                            <!-- &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; -->
+                            Evaluation Results</span></h3>
+                    <div class="content has-text-justified">
+                    <img src="assets/images/dmc_results.png" class="interpolation-image"
                          alt="" style="display: block; margin-left: auto; margin-right: auto"/>
+                        <br>
                     <span style="font-size: 110%">
-                        <span style="font-weight: bold">Scaling model and data</span>. <i>Top:</i> We compare performance of different methods with model sizes ranging from 2M to 200M parameters. Across all model sizes and generalization levels VIMA outperforms prior works. <i>Bottom:</i> For a fixed model size of 92M parameters we compare the effect of imitation learning dataset size of 0.1%, 1%, 10%, and full imitation data. VIMA is extremely sample efficient and can achieve performance comparable to other methods with 10&times; less data.
+                        <b>Results of 8 complex tasks in DMControl.</b> These tasks are chosen to offer multiple degrees of challenges, 
+                        including complex dynamics, sparse rewards, hard exploration, and more. Below are key findings: 
+                        <!-- (i)  CoIT outperforms 
+                        vanilla DDPG and SAC in a wide range.  -->
+                        (i) Although DrQ-v2 has already performed remarkably for continuous control, CoIT is 
+                        more data-efficient on multiple tasks.
+                        (ii) From general trends of the learning curves,
+                        CoIT improves or keeps the data-efficiency in a more stable manner which is not trivial on DMControl tasks.
                     </span>
                     <br>
-                    <br>
-                    <br>
+                    <!-- <br> -->
+                    <!-- <br> -->
 
                     <h3 class="title is-4"><span
-                            class="dvima">Ablation Studies </span></h3>
-
+                            class="dvima">
+                            <!-- &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; -->
+                            Ablation Studies </span></h3>
+                    <div class="content has-text-justified">
                     <br>
 
-                    <img src="assets/images/ablation_input_process.png" class="interpolation-image"
+                    <img src="assets/images/heatmap.png" class="interpolation-image"
                          alt="" style="display: block; margin-left: auto; margin-right: auto"/>
+                         <br>
                     <span style="font-size: 110%">
-                        <span style="font-weight: bold">Ablation on visual tokenizers.</span> We compare the performance of VIMA-200M model across different visual tokenizers. Our proposed object tokens outperform all methods that learn directly from raw pixels, and <i>Object Perceiver</i> that downsamples the object sequence to a fixed number of tokens.
+                        <span style="font-weight: bold">Saliency maps for CoIT on 6 tasks:</span> 
+                            (a) Cartpole Swingup Sparse,
+                            (b) Hopper Stand,
+                            (c) Walker Run,
+                            (d) Cheetah Run,
+                            (e) Quadruped Walk, and
+                            (f) Finger Turn Hard.
+                            These saliency maps demonstrate that CoIT is beneficial for the agent to focus on task-relevant elements
+                             like the whole robot body and ignore the task-irrelevant information like the floor and background. 
+                             Especially in <i>Finger Turn Hard</i>, the lightest part in the saliency map is a red ball in the 
+                             observation, which is highly related to the reward.
                     </span>
 
                     <br>
                     <br>
                     <br>
-                    <br>
+                    <!-- <br> -->
 
-                    <img src="assets/images/global_seq_mod.png" class="interpolation-image"
+                    <img src="assets/images/gaussian_dis.png" class="interpolation-image"
                          alt="" style="display: block; margin-left: auto; margin-right: auto"/>
+                         <br>
                     <span style="font-size: 110%">
-                        <span style="font-weight: bold">Ablation on prompt conditioning. </span>We compare our method (<i>xattn</i>: cross-attention prompt conditioning) with a vanilla transformer decoder (<i>gpt-decoder</i>) across different model sizes. Cross-attention is especially helpful in low-parameter regime and for harder generalization tasks.
-                    </span>
+                        <span style="font-weight: bold">Visualization of the parameters of the Gaussian distribution for image transformation. </span>
+                        These curves demonstrate that the gaussian distribution proposed in CoIT
+                        could automatically find an appropriate transformation to smooth the distribution shift between the different views
+                        of the same observation, therefore being beneficial to the representation learning.
                 </div>
             </div>
 
@@ -645,23 +785,29 @@
     </div>
 </section>
 
+<hr width="1150" style="margin-left: auto; margin-right: auto">
+
 <!--Conclusion-->
 <section class="section">
     <div class="container is-max-widescreen">
-        <div class="rows">
-            <div class="rows is-centered ">
+        <div class="row">
+            <div class="rows is-centered">
                 <div class="row is-full-width">
-                    <h2 class="title is-3"><span
-                            class="dvima">Conclusion</span></h2>
-
+                    <h2 class="title is-3">
+                        <span class="dvima">
+                            <!-- &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; -->
+                            Conclusion
+                        </span></h2>
+                    <div class="content has-text-justified">
                     <p style="font-size: 125%">
-                        Similar to GPT-3, a generalist robot agent should have an intuitive and expressive interface for
-                        human users to convey their intent. In this work, we introduce a novel <i>multimodal</i>
-                        prompting formulation that converts diverse robot manipulation tasks into a uniform sequence
-                        modeling problem. We propose VIMA, a conceptually simple transformer-based agent capable of
-                        solving tasks like visual goal, one-shot video imitation, and novel concept grounding with a
-                        single model. VIMA exhibits superior model and data scaling properties, and provides a strong
-                        starting point for future work.
+                        A novel pixel transformation CoIT under model-free RL algorithms that significantly improves the
+                        data-efficiency and stability for visual tasks is introduced in this work. We theoretically analyze how
+                        the learnable transformation constrains the distribution of the abstracted data, and dissect its benefits
+                        to representation learning. CoIT is no need for any additional modifications to the backbone RL
+                        algorithm and is easy to implement. We compare CoIT to SOTA methods on popular benchmarks and
+                        certify that it gains promising performance with advanced stability. Hopefully, contrastive invariant
+                        transformation can lead to a new branch for representation learning in RL.
+
                     </p>
 
                 </div>
@@ -671,24 +817,32 @@
     </div>
 </section>
 
+<hr width="1150" style="margin-left: auto; margin-right: auto">
 
 <section class="section" id="BibTeX">
+    <div class="row">
+        <div class="rows is-centered">
+            <div class="row is-full-width">
     <div class="container is-max-widescreen content">
         <h2 class="title">BibTeX</h2>
-        <pre><code>@article{jiang2022vima,
-  title   = {VIMA: General Robot Manipulation with Multimodal Prompts},
-  author  = {Yunfan Jiang and Agrim Gupta and Zichen Zhang and Guanzhi Wang and Yongqiang Dou and Yanjun Chen and Li Fei-Fei and Anima Anandkumar and Yuke Zhu and Linxi Fan},
-  year    = {2022},
-  journal = {arXiv preprint arXiv: Arxiv-2210.03094}
-}</code></pre>
+        <pre>
+            <code style="font-size: 100%; margin-left: auto; margin-right: auto; 
+            width: auto; height: auto">
+            @inproceedings{liudata,
+                    title={On the Data-Efficiency with Contrastive Image Transformation in Reinforcement Learning},
+                    author={Liu, Sicong and Zhang, Xi Sheryl and Li, Yushuo and Zhang, Yifan and Cheng, Jian},
+                    booktitle={The Eleventh International Conference on Learning Representations}
+            }
+        </code>
+    </pre>
     </div>
 </section>
 
 <footer class="footer">
     <div class="container">
-        <div class="columns is-centered">
+        <div class="columns is-centered has-text-centered">
             <div class="column">
-                <div class="content has-text-centered">
+                <div class="content">
                     <p>
                         Website template borrowed from <a
                             href="https://github.com/nerfies/nerfies.github.io">NeRFies</a> and <a
